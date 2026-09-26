@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Resume</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Apply dark mode class early to avoid white flash
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="index.html" id="logo">JMTM</a>
+
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="writing.html">Writing</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a class="active" href="resume.html">Resume</a>
+        </div>
+
+        <main class="page-content">
+            <div class="container">
+                <label class="toggle1">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="toggle1-slider"></span>
+                    <span class="on text">dark</span>
+                    <span class="off text">light</span>
+                </label>
+            </div>
+
+            <button class="dl-btn" onclick="downloadFile()"><i class="fa fa-download"></i>download</button>
+
+            <div class="resume">
+                <h2>Resume</h2>
+                <h3>Summary</h3>
+                <p>Motivated and curious student journalist with experience in news writing, beat reporting, and social
+                    science research. Skilled at crafting engaging stories that go beyond the basics. Eager to
+                    contribute sharp writing and editing skills and people-centered reporting to a newsroom.</p>
+                <h3>Experience</h3>
+                <h5>Graphic Design Artist | Baking Bliss Candles & Gifts | May 2024 - present</h5>
+                <ul>➢ Designed a logo, e-commerce website, and product labels using Adobe Illustrator</ul>
+                <ul>➢ Created visual materials aligned with brand identity and target audience</ul>
+                <h5>Politics Reporter | The State Press | Aug 2025 - Oct 2025</h5>
+                <ul>➢ Covered campus politics, city government, and state-level news</ul>
+                <ul>➢ Wrote timely, accurate news stories on tight deadlines in a fast-paced newsroom</ul>
+                <h5>Reporter | Self-Employed | Oct 2024 - present</h5>
+                <ul>➢ Report and publish local, national and international stories for multiple outlets</ul>
+                <ul>➢ Apply AP style and editorial feedback to strengthen reporting and writing techniques</ul>
+                <ul>➢ Develop strong relationships with sources, including city offi cials and community activists</ul>
+                <h3>Skills</h3>
+                <ul>➢ Journalistic and academic writing</ul>
+                <ul>➢ Editing</ul>
+                <ul>➢ Adobe Illustrator</ul>
+                <ul>➢ AP style and grammar</ul>
+                <ul>➢ Research</ul>
+                <ul>➢ Communication skills</ul>
+                <h3>Education</h3>
+                <h5>Arizona State University | Aug 2023 - May 2027</h5>
+                <ul>➢ BA in Journalism and Mass Communication</ul>
+                <ul>➢ Concurrent BA in Political Science</ul>
+                <ul>➢ Minor in Psychology</ul>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2025 Jonah Manthey. Made with HTML5 and CSS3.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a> | <a href="aboutme.html">About</a>
+            </div>
+        </footer>
+
+        <script>
+            function downloadFile() {
+                const link = document.createElement("a");
+                link.href = "assets/Jonah Manthey.pdf";
+                link.download = "jonah-manthey-resume.pdf";
+                link.style.display = "none";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        </script>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleCheckbox = document.getElementById('dark-mode-toggle');
+            if (!toggleCheckbox) return;
+
+            // Load saved preference
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+
+            // Apply dark mode and update toggle state
+            document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+            toggleCheckbox.checked = darkModeEnabled;
+
+            // On toggle, update class and save preference
+            toggleCheckbox.addEventListener('change', () => {
+                const isDark = toggleCheckbox.checked;
+                document.documentElement.classList.toggle('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            });
+        });
+    </script>
+</body>
+
+</html>

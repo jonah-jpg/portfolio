@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>About Me | Jonah Manthey</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Apply dark mode class early to avoid white flash
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="index.html" id="logo">JMTM</a>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="writing.html">Writing</a>
+            <a class="active" href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+        </div>
+        <main class="page-content">
+            <div class="container">
+                <label class="toggle1">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="toggle1-slider"></span>
+                    <span class="on text">dark</span>
+                    <span class="off text">light</span>
+                </label>
+            </div>
+            <div class="bg-split">
+                <div class="column-left">
+                    <img class="about-img" src="assets/img/meandkitty.jpg"
+                        alt="Me sitting with my kitty cat, Tough Guy, in my lap. (He is not tough.)">
+                </div>
+                <div class="column-right">
+                    <h1 class="about-title">About Me</h1>
+                    <div class="about-txt">
+                        <p>I've been writing for as long as I can remember. My interest in journalism began in 7th grade
+                            when I
+                            chose it as an elective; I then wrote for my high school newspaper, <i>The Viking Views</i>.
+                            As
+                            I
+                            became involved in activist circles at my school, I developed an interest in political
+                            reporting. I
+                            strive to make a difference with my writing by amplifying voices that often go unheard, and
+                            I
+                            hold
+                            truth and empathy as guiding principles in both my professional and personal life.</p>
+                        <p>I often joke about journalism being in my blood; my mom majored in journalism at Cronkite and
+                            my
+                            dad
+                            owned a newspaper. However, I came to the field of my own accord. Today, I am proud to be
+                            building
+                            my skills at one of the top journalism schools in the country.</p>
+                        <p>I was born and raised in Arizona, and I plan to stay here so long as it remains habitable. In
+                            my
+                            free
+                            time, I enjoy reading, coding (I made this website myself!), and putting together puzzles. I
+                            have an
+                            insatiable curiosity and a love for learning; I'm frequently getting lost in Wikipedia
+                            rabbit
+                            holes.
+                            I use every story I write as an opportunity to discover more about the world and the people
+                            in
+                            it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="site-footer">
+            <p>&copy; 2025 Jonah Manthey. Made with HTML5 and CSS3.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a> | <a href="aboutme.html">About</a>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleCheckbox = document.getElementById('dark-mode-toggle');
+            if (!toggleCheckbox) return;
+
+            // Load saved preference
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+
+            // Apply dark mode and update toggle state
+            document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+            toggleCheckbox.checked = darkModeEnabled;
+
+            // On toggle, update class and save preference
+            toggleCheckbox.addEventListener('change', () => {
+                const isDark = toggleCheckbox.checked;
+                document.documentElement.classList.toggle('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script>
+        // Apply dark mode class early to avoid white flash
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+    <script src="https://kit.fontawesome.com/bce1cff179.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="index.html" id="logo">JMTM</a>
+        <div class="topnav">
+            <a href="index.html">Home</a>
+            <a href="writing.html">Writing</a>
+            <a href="aboutme.html">About Me</a>
+            <a class="active" href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+        </div>
+        <main class="page-content" id="contact-page">
+            <div class="container">
+                <label class="toggle1">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="toggle1-slider"></span>
+                    <span class="on text">dark</span>
+                    <span class="off text">light</span>
+                </label>
+            </div>
+            <h3 class="contact-title">Reach me</h3>
+            <h5><a class="contact-text" id="email" href="mailto:jonahmanthey@protonmail.com">jonahmanthey@protonmail.com</a></h5>
+            <h5 class="contact-text">@jonahmanthey.70 on Signal</h5>
+            <h3 class="contact-title">Find me</h3>
+            <h5><a class="contact-text" href="https://www.linkedin.com/in/jonah-manthey/">LinkedIn</a></h5>
+            <h5><a class="contact-text" href="https://www.linkedin.com/in/jonah-manthey/">Substack</a></h5>
+        </main>
+
+        <footer class="site-footer" id="contact-footer">
+            <p>&copy; 2025 Jonah Manthey. Made with HTML5 and CSS3.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a> | <a href="aboutme.html">About</a>
+            </div>
+        </footer>
+    </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleCheckbox = document.getElementById('dark-mode-toggle');
+            if (!toggleCheckbox) return;
+
+            // Load saved preference
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+
+            // Apply dark mode and update toggle state
+            document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+            toggleCheckbox.checked = darkModeEnabled;
+
+            // On toggle, update class and save preference
+            toggleCheckbox.addEventListener('change', () => {
+                const isDark = toggleCheckbox.checked;
+                document.documentElement.classList.toggle('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            });
+        });
+    </script>
+</body>
+
+</html>

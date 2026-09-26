@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jonah Manthey</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/bce1cff179.js" crossorigin="anonymous"></script>
+
+    <script>
+        // Apply dark mode class early to avoid white flash
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark-mode');
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <a href="index.html" id="logo">JMTM</a>
+
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="writing.html">Writing</a>
+            <a href="graphicdesign.html">Graphic Design</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.html">Resume</a>
+        </div>
+
+        <main class="page-content">
+            
+            <div class="container">
+                <label class="toggle1">
+                    <input type="checkbox" id="dark-mode-toggle" />
+                    <span class="toggle1-slider"></span>
+                    <span class="on text">dark</span>
+                    <span class="off text">light</span>
+                </label>
+            </div>
+
+            <div class="flex-container">
+                <div class="headshot">
+                    <img src="assets/img/headshotblur.jpg"
+                        alt="Jonah Manthey smiles in front of the downtown Phoenix cityscape." id="headshot">
+                </div>
+                <div class="body-text">
+                    <h1 class="title">Jonah Manthey</h1>
+                    <h5 class="subtitle">political journalist telling the stories that matter</h5>
+                    <button class="about-button" onclick="location.href='aboutme.html'">about me</button>
+                </div>
+            </div>
+
+            <div class="recent">
+                <h2 class="page-title" id="news-title">Recent work</h2>
+                
+                <div class="recent-item">
+                    <p class="date">4 June 2026</p>
+                    <a href="https://www.phoenixnewtimes.com/news/tempe-activist-ron-tapscott-hold-city-leaders-to-account-40671745/"
+                        class="story-link" target="_blank">
+                        <h2 class="headline">Meet the pesky activist determined to hold Tempe leaders to account</h2>
+                    </a>
+                </div>
+                <div class="recent-item">
+                    <p class="date">29 April 2026</p>
+                    <a href="https://jonahmanthey.substack.com/p/arizonas-ballroom-scene-grows"
+                        class="story-link" target="_blank">
+                        <h2 class="headline">Stepping into the spotlight: Arizona's ballroom scene grows</h2>
+                    </a>
+                </div>
+                <div class="recent-item">
+                    <p class="date">19 December 2025</p>
+                    <a href="https://jonahmanthey.substack.com/p/tempes-homelessness-conflict-runs?r=4lo6id"
+                        class="story-link" target="_blank">
+                        <h2 class="headline">Tempe's homelessness conflict runs deep</h2>
+                    </a>
+                </div>
+
+                <button class="more-button" onclick="location.href='writing.html'">see more</button>
+
+            </div>
+
+        </main>
+
+        <footer class="site-footer">
+            <p>&copy; 2026 Jonah Manthey. Made with HTML5 and CSS3.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact</a> | <a href="aboutme.html">About</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleCheckbox = document.getElementById('dark-mode-toggle');
+            if (!toggleCheckbox) return;
+
+            // Load saved preference
+            const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+
+            // Apply dark mode and update toggle state
+            document.documentElement.classList.toggle('dark-mode', darkModeEnabled);
+            toggleCheckbox.checked = darkModeEnabled;
+
+            // On toggle, update class and save preference
+            toggleCheckbox.addEventListener('change', () => {
+                const isDark = toggleCheckbox.checked;
+                document.documentElement.classList.toggle('dark-mode', isDark);
+                localStorage.setItem('darkMode', isDark);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
