@@ -205,7 +205,6 @@ button:hover {
     font-weight: 500;
     padding: 1% 1% 1% 1%;
     letter-spacing: .5px;
-    z-index: 3;
 }
 
 @media only screen and (max-width: 768px) {
