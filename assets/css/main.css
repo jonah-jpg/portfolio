@@ -186,7 +186,7 @@ button:hover {
 /*navigation bar*/
 
 .topnav {
-    background-color: var(--purple-light);
+    background-color: transparent;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
     padding-right: 2%;
