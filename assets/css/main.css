@@ -600,9 +600,15 @@ button:hover {
 
 /* RESUME PAGE */
 
+#dl-dm-container {
+    display: flex;
+    justify-content: space-between;
+    float: none;
+
+}
+
 .dl-btn {
     padding: 10px;
-    margin: 1%;
     z-index: 1;
 }
 
@@ -648,24 +654,6 @@ button:hover {
     line-height: 1.5;
 }
 
-.bg-split {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    /* optional: ensures it fills screen if content is short */
-}
-
-
-.column-right {
-    flex: 1;
-    background-color: var(--base);
-}
-
-.column-left {
-    flex: 1;
-    background: url('IMG_20241003_181255.jpg') center / cover no-repeat;
-}
-
 .about-img {
     max-width: 70%;
     margin-left: 10%;
@@ -676,6 +664,36 @@ button:hover {
     object-fit: cover;
 }
 
+@media screen and (min-width: 768px) {
+    
+    .bg-split {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+ 
+    .about-img {
+        max-width: 50%;
+        margin: 0% 25% 0% 25%;
+        aspect-ratio: 1/1;
+    }
+
+    .about-txt, .about-title {
+        text-align: center;
+    }
+
+    .about-txt {
+        margin: 5% 10% 5% 10%;
+    }
+
+    .about-title {
+        margin: 5% 0% 0% 0%;
+    }
+}
 
 
 /* CONTACT PAGE */

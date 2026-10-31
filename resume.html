@@ -32,46 +32,50 @@
         </div>
 
         <main class="page-content">
-            <div class="container">
+            <div class="container" id="dl-dm-container">
+            
+                <button class="dl-btn" onclick="downloadFile()"><i class="fa fa-download"></i>download</button>
+                
                 <label class="toggle1">
                     <input type="checkbox" id="dark-mode-toggle" />
                     <span class="toggle1-slider"></span>
                     <span class="on text">dark</span>
                     <span class="off text">light</span>
                 </label>
+            
             </div>
 
-            <button class="dl-btn" onclick="downloadFile()"><i class="fa fa-download"></i>download</button>
 
             <div class="resume">
                 <h2>Resume</h2>
                 <h3>Summary</h3>
-                <p>Motivated and curious student journalist with experience in news writing, beat reporting, and social
-                    science research. Skilled at crafting engaging stories that go beyond the basics. Eager to
-                    contribute sharp writing and editing skills and people-centered reporting to a newsroom.</p>
+                <p>Curious and dedicated storyteller with experience in beat reporting, creative nonfiction and graphic
+                design. Skilled at crafting engaging stories that go beyond basic news writing. Eager to contribute
+                sharp writing and editing skills and people-centered reporting to a newsroom.</p>
                 <h3>Experience</h3>
-                <h5>Graphic Design Artist | Baking Bliss Candles & Gifts | May 2024 - present</h5>
-                <ul>➢ Designed a logo, e-commerce website, and product labels using Adobe Illustrator</ul>
-                <ul>➢ Created visual materials aligned with brand identity and target audience</ul>
-                <h5>Politics Reporter | The State Press | Aug 2025 - Oct 2025</h5>
-                <ul>➢ Covered campus politics, city government, and state-level news</ul>
-                <ul>➢ Wrote timely, accurate news stories on tight deadlines in a fast-paced newsroom</ul>
+                <h5>Reporter | Howard Center for Investigative Journalism | Aug 2026 - present</h5>
+                <ul>✦ Pursue and report on structural problems with an investigative mindset</ul>
+                <ul>✦ Build skills in data analysis, deep research and public records requests</ul>
                 <h5>Reporter | Self-Employed | Oct 2024 - present</h5>
-                <ul>➢ Report and publish local, national and international stories for multiple outlets</ul>
-                <ul>➢ Apply AP style and editorial feedback to strengthen reporting and writing techniques</ul>
-                <ul>➢ Develop strong relationships with sources, including city offi cials and community activists</ul>
+                <ul>✦ Pitch original story ideas to outlets such as Phoenix New Times and North Central News</ul>
+                <ul>✦ Build connections within communities to strengthen source relationships and find new stories</ul>
+                <h5>Politics Reporter | The State Press | Aug 2025 - Oct 2025</h5>
+                <ul>✦ Wrote timely, accurate stories that brought relevant news to the ASU community</ul>
+                <ul>✦ Collaborated with colleagues and editors to produce high-quality work</ul>
+                <h5>Graphic Design Artist | Baking Bliss Candles & Gifts | May 2024 - present</h5>
+                <ul>✦ Design a logo, e-commerce website, and product labels using Adobe Illustrator</ul>
+                <ul>✦ Create visual materials aligned with brand identity and target audience</ul>
                 <h3>Skills</h3>
-                <ul>➢ Journalistic and academic writing</ul>
-                <ul>➢ Editing</ul>
-                <ul>➢ Adobe Illustrator</ul>
-                <ul>➢ AP style and grammar</ul>
-                <ul>➢ Research</ul>
-                <ul>➢ Communication skills</ul>
+                <ul>✦ News and creative writing</ul>
+                <ul>✦ Editing</ul>
+                <ul>✦ Adobe Illustrator, Canva and Inkscape</ul>
+                <ul>✦ AP style and grammar</ul>
+                <ul>✦ Research</ul>
+                <ul>✦ HTML and CSS</ul>
                 <h3>Education</h3>
                 <h5>Arizona State University | Aug 2023 - May 2027</h5>
-                <ul>➢ BA in Journalism and Mass Communication</ul>
-                <ul>➢ Concurrent BA in Political Science</ul>
-                <ul>➢ Minor in Psychology</ul>
+                <ul>✦ BA in Journalism and Mass Communication — digital/print focus</ul>
+                <ul>✦ BA in Political Science (completed)</ul>
             </div>
         </main>
 
@@ -83,6 +87,7 @@
         </footer>
 
         <script>
+            // CHANGE FILE TO UPDATED RESUME
             function downloadFile() {
                 const link = document.createElement("a");
                 link.href = "assets/Jonah Manthey.pdf";
